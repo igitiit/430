@@ -40,7 +40,7 @@ jobs:
       - name: Verify MySQL connection
         run: |
           echo "Checking MySQL connection..."
-          until mysqladmin ping -h"127.0.0.1" --silent; do
+          until mysqladmin ping -h"127.0.0.1" -P 3307 --silent; do
             echo "Waiting for MySQL to be ready..."
             sleep 3
           done
