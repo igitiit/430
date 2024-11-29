@@ -37,6 +37,15 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Verify MySQL connection
+        run: |
+          echo "Checking MySQL connection..."
+          until mysqladmin ping -h"127.0.0.1" --silent; do
+            echo "Waiting for MySQL to be ready..."
+            sleep 3
+          done
+          echo "MySQL is up and running."
+
       - name: Run Django checks
         run: |
           python3 manage.py check
