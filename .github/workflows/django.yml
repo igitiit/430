@@ -18,9 +18,9 @@ jobs:
           MYSQL_DATABASE: blog_db
         options: >-
           --health-cmd="mysqladmin ping"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=3
+          --health-interval=15s
+          --health-timeout=10s
+          --health-retries=5
         ports:
           - 3307:3306
 
