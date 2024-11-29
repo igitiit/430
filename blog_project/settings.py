@@ -82,7 +82,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'jp',
         'HOST': 'localhost',
-        'PORT': '3306',
+        'PORT': '3307' if os.getenv('CI') else '3306',
     }
 }
 
