@@ -1,3 +1,4 @@
+---
 name: Django CI
 
 on:
@@ -22,7 +23,7 @@ jobs:
           --health-timeout=5s
           --health-retries=3
         ports:
-          - 3306:3306
+          - 3307:3306
 
     steps:
       - name: Checkout code
