@@ -1,0 +1,38 @@
+name: Delete old workflow runs and Run Tests
+on:
+  schedule:
+    - cron: '* * * * *' # Run every minute
+  push:
+    branches:
+      - main # Trigger on push to main branch
+
+jobs:
+  del_runs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ secrets.PAT_TOKEN }} # Enter secret on your git account
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 6
+
+  run_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up environment
+        run: |
+          # Add commands to set up your project's environment
+          # For example:
+          # npm install
+
+      - name: Run tests
+        run: |
+          # Replace this with your actual test command
+          # For example:
+          # npm test
+          echo "Running tests..."
