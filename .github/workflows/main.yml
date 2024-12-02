@@ -15,7 +15,7 @@ jobs:
         with:
           token: ${{ secrets.PAT_TOKEN }} # Enter secret on your git account
           repository: ${{ github.repository }}
-          retain_days: 2
+          retain_days: 0
           keep_minimum_runs: 6
 
   run_tests:
