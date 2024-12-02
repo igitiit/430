@@ -25,12 +25,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up environment
-        # Add steps to set up your project's environment
-        # For example, installing dependencies
+        run: |
+          # Add commands to set up your project's environment
+          # For example:
+          # npm install
 
       - name: Run tests
-        # Add your test command here
         run: |
           # Replace this with your actual test command
+          # For example:
+          # npm test
           echo "Running tests..."
-          # Example: npm test
