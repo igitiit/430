@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'blog_db',
         'USER': 'root',
         'PASSWORD': 'jp',
-        'HOST': '127.0.0.1',
+        'HOST': '',
         'PORT': '3307' if os.getenv('CI') else '3306',
     }
 }
