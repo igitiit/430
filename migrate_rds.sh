@@ -8,7 +8,7 @@
 # - Table structure already exists in RDS
 
 LOCAL_USER="root"
-LOCAL_PASSWORD="jp"
+LOCAL_PASSWORD="your root password"
 LOCAL_DB="blog_db"
 
 # User Interaction functions
