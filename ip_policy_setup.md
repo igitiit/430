@@ -90,4 +90,4 @@ If you prefer using the full EC2 access policy instead:
 aws iam attach-user-policy \
     --user-name YOUR_USER_NAME \
     --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
-```
+```\n\nLast updated: Fri Jul  4 13:06:11 CDT 2025
